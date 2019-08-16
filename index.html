@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Akan names calculator</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-</head
+    <script defer src="custom.js"></script>
+</head >
 <body>
-    <div id="date">
-    <h1>Enter your date of birth</h1>
-    <form class="form" action="index.html" method="post">
-     Date:<input type="text" name="date" placeholder="dd" >
-    Month:<input type="text" name="month" placeholder="mm">
-     year:<input type="text" name="year" placeholder="yy">
-     <br>
+<div class="login-box">
+        <h1>Enter your date of birth</h1>
+        <div class="textbox">
+        <form id="form" action="index.html" method="post">
+            <label for="date-of-birth">
+                Date:<input type="text" id="date" name="date-of-birth" placeholder="dd" value="">
+                <br>
+            </label>
+        </div>
+        <div class="textbox">
+            <label for="month-of-birth">
+                Month:<input type="text" id="month" name="month-of-birth" placeholder="mm" value="">
+                <br>
+            </label>
+        </div>
+        <div class="textbox">
+            <label for="year-of-birth">
+                year:<input type="text" id="year" name="year-of-birth" placeholder="yy" value="">
+                <br>
+            </label>
     </div>
-     <div id="gender">
-         <h2>Gender</h2>
-     Female:
-     <input type="radio" name="Female"> <br>
-     Male:
-     <input type="radio" name="Male"> <br>
+    <div class="gender">
+        <h2>Gender</h2>
+        Female:<br>
+        <input type="radio" name="gender" value="female"> <br>
+        Male:<br>
+        <input type="radio" name="gender" value="male"> <br>
     </div>
     <div id="button">
-     <button>submit</button> 
-     <br>
+       <input class="btn" type="button" value="submit" onclick="validateform()">
+        <br>
     </div>
     </form>
+</div>
 </body>
+
 </html>
