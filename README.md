@@ -5,7 +5,7 @@
  Clone the repository to get a copy of the project up and run it in your local computer for development and testing purposes.
 
 ## Deployment
-### I used gh-pages to make this website go live.
+ I used gh-pages to make this website go live.
 
 ## Built With
 ### HTML: Used to make up the whole page
