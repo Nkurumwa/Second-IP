@@ -8,15 +8,15 @@
  I used gh-pages to make this website go live.
 
 ## Built With
-### HTML: Used to make up the whole page
-### CSS: Used to style the page
-###JavaScript: Used to make the page interactive
+  HTML: Used to make up the whole page
+  CSS: Used to style the page
+  JavaScript: Used to make the page interactive
 
 #How to install the project
  Just click on the download button in my github account and download the project to your local computer.
 
 # Author
-## Ishmael Nkurumwa
+### Ishmael Nkurumwa
 
 # License
  This project is licensed under the MIT License - see the LICENSE.md file for details.
