@@ -108,15 +108,15 @@ function validateform() {
         switch (dayIndex) {
             case 0:
                 akanName = "Akosua";
-                alert("Born on Sunday : Akosua");
+                alert("DoB Sunday : Akosua");
                 break;
             case 1:
                 akanName = "Adwoa";
-                alert("Born on Monday : Adwoa");
+                alert("DoB Monday : Adwoa");
                 break;
             case 2:
                 akanName = "Abenaa";
-                alert("Born on Tuesday : Abenaa");
+                alert("DoB Tuesday : Abenaa");
                 break;
             case 3:
                 akanName = "Akua";
