@@ -1,27 +1,31 @@
  
  @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
     body{
-     background-color: beige;
-     font-size: x-large;
+     font-size:solid;
      flex-direction: column;
      background-image:url(https://www.lifung.com/wp-content/uploads/2018/01/lf-hero.jpg);
      background-repeat: no-repeat;
      text-align: center;
      background-attachment: fixed;
      background-size: cover;
-     margin: 0;
-     padding: 0;
      font-family: 'Anton', sans-serif;
+     display: flex;
      color: white;
-     height: 200vh;
+     flex-flow: wrap-reverse;
+     height:170vh ;
+     width: 200vh;
+     
+    
+ }
+ #description{
+     padding: 0;
  }
  .gender{
-      display: inline-block;
+      display: inline;
       text-align: center;
-      display:block;
+      display:inline;
     padding: 30px;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: space-between;
     overflow: hidden;
     font-size: 20px;
     padding: 8px 0;
@@ -31,21 +35,23 @@
   #button{
       display:inline-block;
       text-align: left;
-      justify-content: space-around;
+      justify-content: space-between;
       width: 100%;
       overflow: hidden;
-      font-size: 40px;
+      font-size: 20px;
       padding: 8px 0;
       border-bottom: 1px solid #4caf50;
+      color: white;
+    
   }
 .textbox{
     display:block;
     padding: 30px;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     overflow: hidden;
-    font-size: 20px;
-    padding: 8px 0;
+    font-size: 40px;
+    padding: 8px;
     border-bottom: 1px solid #4caf50;
 }
 .login-box{
@@ -53,7 +59,11 @@
     position: absolute;
     left: 50%;
     top: 50%;
+    bottom:50%;
+    right:50%;
     transform: translate(-50%, 50%);
+    padding-top:0;
+    
     
 }
 .login-box,h1{
@@ -67,7 +77,7 @@
     background: none;
     border: 2px solid #4caf50;
     padding: 5px;
-    font-size: 18px;
+    font-size: 24px;
     cursor: pointer;
     margin: 12px 0;
 }
