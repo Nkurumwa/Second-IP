@@ -120,19 +120,19 @@ function validateform() {
                 break;
             case 3:
                 akanName = "Akua";
-                alert("Born on Wednesday : Akua");
+                alert("DoB Wednesday : Akua");
                 break;
             case 4:
                 akanName = "Yaa";
-                alert("Born on Thursday : Yaa");
+                alert("DoB Thursday : Yaa");
                 break;
             case 5:
                 akanName = "Afua";
-                alert("Born on Friday : Afua");
+                alert(" DoB Friday : Afua");
                 break;
             case 6:
                 akanName = "Ama";
-                alert(" Born on Saturday : Ama");
+                alert(" DoB Saturday : Ama");
                 break;
             default:
                 akanName = "Please input the correct details!"
