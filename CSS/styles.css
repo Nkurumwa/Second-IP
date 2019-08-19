@@ -12,8 +12,8 @@
      margin: 0;
      padding: 0;
      font-family: 'Anton', sans-serif;
-     
      color: white;
+     height: 200vh;
  }
  .gender{
       display: inline-block;
