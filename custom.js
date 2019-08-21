@@ -11,9 +11,9 @@ function validateform() {
     var i = 0;
 
 
-    // alert(day);
-    // alert(month);
-    // alert(yearInput);
+    alert(day);
+    alert(month);
+    alert(yearInput);
 
 
     // if (isNaN(date.value) || date.value < 1 || date.value > 31 || date.value === null || date.value === "") {
