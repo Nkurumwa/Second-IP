@@ -12,7 +12,7 @@
   CSS: Used to style the page
   JavaScript: Used to make the page interactive
 
-#How to install the project
+# How to install the project
  Just click on the download button in my github account and download the project to your local computer.
 
 # Author
