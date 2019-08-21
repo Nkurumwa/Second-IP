@@ -11,27 +11,27 @@ function validateform() {
     var i = 0;
 
 
-    // alert(day);
-    // alert(month);
-    // alert(yearInput);
+    alert(day);
+    alert(month);
+    alert(yearInput);
 
-    if (isNaN(date.value) || date.value < 1 || date.value > 31 || date.value === null || date.value === "") {
-        alert("Please input your date");
-    }
+    // if (isNaN(date.value) || date.value < 1 || date.value > 31 || date.value === null || date.value === "") {
+    //     alert("Please input your date");
+    // }
     // else {
     //     alert("continue");
     // }
 
 
-    if (isNaN(month.value) || month.value < 1 || month.value > 12 || month.value === "" || month.value == null) {
-        alert('invalid month');
-    }
+    // if (isNaN(month.value) || month.value < 1 || month.value > 12 || month.value === "" || month.value == null) {
+    //     alert('invalid month');
+    // }
     // else {
     //     alert('you ok');
     // }
-    if (isNaN(year.value) || year.value === "" || year.value === null || year.value < 1900 || year.value > currentYear) {
-        alert("Please input your year");
-    }
+    // if (isNaN(year.value) || year.value === "" || year.value === null || year.value < 1900 || year.value > currentYear) {
+    //     alert("Please input your year");
+    // }
     // else {
     //     alert("select year");
     // }
