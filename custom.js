@@ -68,7 +68,7 @@ document.getElementById('three').style.color = "red"
 if (gen[0].checked === false && gen[1].checked === false) {
 
     alert('select gender');
-    
+
  } else {
      for (var i = 0; i < gen.length; i++) {
          if (gen[i].checked){
@@ -130,6 +130,3 @@ for (var name in femaleNames) {
     
     }
 }
-// function myFunction(){
-//     alert('something')
-// }
