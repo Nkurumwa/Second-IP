@@ -1,146 +1,137 @@
-
-function validateform() {
-    const day = Number(document.getElementById("date").value);
-    const month = Number(document.getElementById("month").value);
-    const yearInput = document.getElementById("year").value;
-    const gen = document.getElementsByName("gender");
-    const year = Number(yearInput.slice(0, 2));
-    const century = Number(yearInput.slice(2, 4));
-    const currentDate = new Date();
-    const currentYear = currentDate.getFullYear();
-    var i = 0;
-
-
-    alert(day);
-    alert(month);
-    alert(yearInput);
-
-
-    // if (isNaN(date.value) || date.value < 1 || date.value > 31 || date.value === null || date.value === "") {
-    //     alert("Please input your date");
-    // }
-    // else {
-    //     alert("continue");
-    // }
-
-
-    // if (isNaN(month.value) || month.value < 1 || month.value > 12 || month.value === "" || month.value == null) {
-    //     alert('invalid month');
-    // }
-    // else {
-    //     alert('you ok');
-    // }
-    // if (isNaN(year.value) || year.value === "" || year.value === null || year.value < 1900 || year.value > currentYear) {
-    //     alert("Please input your year");
-    // }
-    // else {
-    //     alert("select year");
-    // }
-
-    // if (gen[0].checked === true && gen[1].checked === true) {
-    //     alert("PLease select gender");
-    // } else {
-    //     for (i = 0; i < gen.length; i++) {
-    //         if (gen[i].checked)
-    //             alert(gen[i].value);
-    //     }
-    // }
-
-
-    while (i < gen.length) {
-        if (gen[i].checked) {
-            gender = gen[i].value;
-
-        }
-        i++;
+var maleNames = {
+    Sunday: 'Kwasi',
+Monday: 'Kwadwo',
+Tuesday: 'Kwabena',
+Wednesday: 'Kwaku',
+Thursday: 'Yaw',
+Friday: 'Kofi',
+Saturday: 'Kwame',
+};
+var femaleNames = {
+Sunday: 'Akosua',
+Monday: 'Adwoa',
+Tuesday: 'Abenaa',
+Wednesday: 'Akua',
+Thursday: 'Yaa',
+Friday: 'Afua',
+Saturday: 'Ama',
+};
+function validation() {
+var date = document.getElementById("d").value;
+var month = document.getElementById("m").value;
+var year = document.getElementById("yy").value;
+var gen = document.getElementsByName("gd");
+var currentDate = new Date();
+var currentYear = currentDate.getFullYear();
+if(isNaN(date) || date === null || date === "" || date < 1 || date > 31){
+    alert("invalid date");
+    return false;
+}
+var ListofDays = [31,28,31,30,31,30,31,31,30,31,30,31];
+if(isNaN(month) || month=== "" || month ===null || month <1 || month>12){
+    document.getElementById('two').innerHTML = "invalid month";
+    document.getElementById('two').style.color = "red"
+    alert("invalid month");
+   return false;
+}
+ if(month===1 || month>2){
+if (date>ListofDays[month-1])
+{
+alert('Invalid date format!');
+return false;
+}
+}
+if(month===2){
+var lyear = false;
+if ( (!(year % 4) && year % 100) || !(year % 400)) 
+{
+  
+lyear = true;
+}
+if ((lyear==false) && (date>=29))
+{
+alert('Invalid date format!');
+return false;
+}
+if ((lyear==true) && (date>29))
+{
+alert('Invalid date format!');
+return false;
+}
+}
+if(isNaN(year) || year === "" ||year === null || year <1900 || year > currentYear){
+document.getElementById('three').innerHTML = "invalid year";
+document.getElementById('three').style.color = "red"
+    alert("invalid year");
+    return false;
+}
+if (gen[0].checked === false && gen[1].checked === false) {
+   
+    alert('select gender');
+    
+ } else {
+     for (var i = 0; i < gen.length; i++) {
+         if (gen[i].checked){
+            alert(gen[i].value);
+                gend = gen[i].value;
+     }
     }
-    // for(var gender of gen) {
-    //     if (gender.checked) {
-    //         return gender.value;
+                //return gend;
+                var userInputs ={
+                    userDate: date,
+                    userMonth: month,
+                    userYear: year,
+                    userGender: gend
+                };
+                ///////////
+                return userInputs;
+                
+            }           
+}
+function myFunction(){
+ var a = validation();
+ var DD = parseInt(a.userDate);
+ var MM = parseInt(a.userMonth);
+ var newYear = a.userYear;
+ var newGender = a.userGender;
+//var weekDate = Math.floor((((CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7);
+// var a = (14 - month) / 12
+//                                       //calculating dday of the week
+// var y = year - a                          // 
 
-    //     }
-    // }
-    alert(gender);
-    // return gender;
+// var m = month + 12 * a - 2
 
+// var d = (day + y + y / 4 - y / 100 + y / 400 + (31 * m / 12) % 7
 
-    // var gender = genderSelected();
+var a = Math.floor((14 - MM) / 12);
+var y = newYear - a;
+var m = MM + 12 * a - 2;
+var dayOfTheWeek = (DD + y + Math.floor(y / 4) - Math.floor(y / 100) +
+Math.floor(newYear / 400) + Math.floor((31 * m) / 12)) % 7;
 
+var daysOfaweek = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday',       
+     'Thursday', 'Friday', 'Saturday');
+var realDay = daysOfaweek[dayOfTheWeek];
 
-    // var isDayValid = dayValid();
-    //   var isMonthValid = monthValid();
-    var dayIndex = Math.round((((century / 4) - 2 * century - 1) + ((5 * year / 4)) + ((26 * (month + 1) / 10)) + day) % 7);
-    var akanName;
-    if (gender === "male") {
-        switch (dayIndex) {
-            case 0:
-                akanName = "Kwasi";
-                alert("Born on Sunday : Kwasi");
-                break;
-            case 1:
-                akanName = "Kwadwo";
-                alert("Born on Monday : Kwadwo");
-                break;
-            case 2:
-                akanName = "Kwabena";
-                alert("Born on Tuesday : Kwabena");
-                break;
-            case 3:
-                akanName = "Kwaku";
-                alert("Born on Wednesday : Kwaku");
-                break;
-            case 4:
-                akanName = "Yaw";
-                alert("Born on Thursday : Yaw");
-                break;
-            case 5:
-                akanName = "Kofi";
-                alert("Born on Friday : Kofi");
-                break;
-            case 6:
-                akanName = "Kwame";
-                alert("Born on Saturday : Kwame");
-                break;
-            default:
-                akanName = "Please input the correct details!"
-                alert("Please input the correct details!");
+if(newGender === 'female') {
+for (var name in femaleNames) {
+        if (femaleNames.hasOwnProperty(name)) {
+            if (name === realDay) {
+                alert("Your Akan name is "+femaleNames[name]);
+            }
         }
-    } else if (gender === "female") {
-        switch (dayIndex) {
-            case 0:
-                akanName = "Akosua";
-                alert("DoB Sunday : Akosua");
-                break;
-            case 1:
-                akanName = "Adwoa";
-                alert("DoB Monday : Adwoa");
-                break;
-            case 2:
-                akanName = "Abenaa";
-                alert("DoB Tuesday : Abenaa");
-                break;
-            case 3:
-                akanName = "Akua";
-                alert("DoB Wednesday : Akua");
-                break;
-            case 4:
-                akanName = "Yaa";
-                alert("DoB Thursday : Yaa");
-                break;
-            case 5:
-                akanName = "Afua";
-                alert(" DoB Friday : Afua");
-                break;
-            case 6:
-                akanName = "Ama";
-                alert(" DoB Saturday : Ama");
-                break;
-            default:
-                akanName = "Please input the correct details!"
-                alert("Please input the correct details!");
+    }
+ }else if(newGender === 'male') {
+    for (var name in maleNames) {
+        if (maleNames.hasOwnProperty(name)) {
+            if (name === realDay) {
+                alert("Your Akan name is "+maleNames[name]);
+            }
         }
-    } else {
-        alert("Please try again with the correct data.");
+    }
+    
     }
 }
-
+// function myFunction(){
+//     alert('something')
+// }
