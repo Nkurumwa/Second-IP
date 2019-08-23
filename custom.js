@@ -66,7 +66,7 @@ document.getElementById('three').style.color = "red"
     return false;
 }
 if (gen[0].checked === false && gen[1].checked === false) {
-   
+
     alert('select gender');
     
  } else {
@@ -83,9 +83,7 @@ if (gen[0].checked === false && gen[1].checked === false) {
                     userYear: year,
                     userGender: gend
                 };
-                ///////////
                 return userInputs;
-                
             }           
 }
 function myFunction(){
