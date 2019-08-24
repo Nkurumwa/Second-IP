@@ -29,8 +29,8 @@ if(isNaN(date) || date === null || date === "" || date < 1 || date > 31){
 }
 var ListofDays = [31,28,31,30,31,30,31,31,30,31,30,31];
 if(isNaN(month) || month=== "" || month ===null || month <1 || month>12){
-    document.getElementById('two').innerHTML = "invalid month";
-    document.getElementById('two').style.color = "red"
+    // document.getElementById('two').innerHTML = "invalid month";
+    // document.getElementById('two').style.color = "red"
     alert("invalid month");
    return false;
 }
@@ -60,8 +60,6 @@ return false;
 }
 }
 if(isNaN(year) || year === "" ||year === null || year <1900 || year > currentYear){
-document.getElementById('three').innerHTML = "invalid year";
-document.getElementById('three').style.color = "red"
     alert("invalid year");
     return false;
 }
