@@ -1,5 +1,5 @@
 # Second_IP
- This project mainly shows JavaScript interactivity.
+ This project mainly shows JavaScript interactivity through selection of Akan names according to the date of birth.
 
 ## Getting Started
  Clone the repository to get a copy of the project up and run it in your local computer for development and testing purposes.
